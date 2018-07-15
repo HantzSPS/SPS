@@ -1,0 +1,56 @@
+---
+title: "Hantz_Angrand_Week1_Assignment"
+author: "Hantz Angrand"
+date: "July 15, 2018"
+output:
+  html_document:
+    df_print: paged
+---
+#Use loop to calculate factorial 12
+```{r}
+n<-12
+res<-1
+for(i in 0:11)
+{
+  res<-res * (n-i)
+  
+}
+print (res)
+```
+
+
+#Show how to create a numeric vector that contains the sequence from 20 to 50 by 5
+
+```{r}
+nvec<-c(20:50)
+nvc<-nvec[seq(0,length(nvec),5)]
+nvc
+```
+
+#Create the function "factorial" that takes a trio of input numbers a, b, and c and solve the quadratic equation. The function should print as output the two solutions.
+
+```{r} 
+calc_factorial = function(a,b,c){
+  sol<-b^2- (4*a*c)
+  q<-0
+  if(sol<0)
+  {
+    return ("no solution")
+  }
+  else{
+    q<-q + sqrt(sol)
+    
+  }
+  x1<-(b-q)/(2*a)
+  print(x1)
+  
+  x2<-(b+q)/(2*a)
+  print (x2)
+  
+}
+
+```
+
+```{r}
+calc_factorial(1,2,1)
+```
